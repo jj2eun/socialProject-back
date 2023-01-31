@@ -30,7 +30,9 @@ dependencies {
 	testImplementation 'junit:junit'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	// mariaDB JDBC driver
-	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.4'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	implementation 'org.xmlunit:xmlunit-core:2.9.0'
 }
 
 tasks.named('test') {

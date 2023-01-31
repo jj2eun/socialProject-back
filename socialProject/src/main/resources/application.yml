@@ -1,0 +1,12 @@
+spring: # 디비 설정
+  datasource:
+    url: jdbc:mariadb://34.64.37.84:3306/social
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: mandu
+    password: mandu@1234
+
+mybatis:
+  type-aliases-package: com.social.dto    # entity가 존재하는 경로작성.
+  mapper-locations: mybatis/**.xml        # XmlMapper.xml이 존재하는 경로작성.
+  configuration:
+    map-underscore-to-camel-case: true # 카멜 케이스 적용
