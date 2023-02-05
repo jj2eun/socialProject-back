@@ -2,7 +2,6 @@ package com.social;
 
 import com.social.dto.board;
 import com.social.mapper.boardMapper;
-import com.social.service.boardService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,11 +17,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Transactional
 public class TestApplication {
 
-    @Autowired boardService service;
+    @Autowired boardMapper mapper;
 
     @Test
     public void getList(){
-        List<board> result = service.getList();
+        List<board> result = mapper.getList();
 
         System.out.println(result);
 

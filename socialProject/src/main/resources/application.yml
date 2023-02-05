@@ -5,7 +5,7 @@ spring: # 디비 설정
     username: mandu
     password: mandu@1234
 
-mybatis:
+mybatis: #Mybatis 설정
   type-aliases-package: com.social.dto    # entity가 존재하는 경로작성.
   mapper-locations: mybatis/**.xml        # XmlMapper.xml이 존재하는 경로작성.
   configuration:
