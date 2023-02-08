@@ -8,7 +8,7 @@ import lombok.Data;
 *
 * */
 @Data
-public class board {
+public class Board {
 
     private String boardId;
     private String contents;

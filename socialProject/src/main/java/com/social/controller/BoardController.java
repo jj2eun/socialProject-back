@@ -1,7 +1,7 @@
 package com.social.controller;
 
-import com.social.dto.board;
-import com.social.mapper.boardMapper;
+import com.social.dto.Board;
+import com.social.mapper.BoardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,14 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class boardController {
+public class BoardController {
 
     @Autowired
-    private boardMapper mapper;
-
+    private BoardMapper mapper;
+    
     @RequestMapping(value="/memberList", method={RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public List<board> memberList(HttpServletRequest servletRequest, HttpServletResponse servletResponse) throws  Exception{
+    public List<Board> memberList(HttpServletRequest servletRequest, HttpServletResponse servletResponse) throws  Exception{
         return mapper.getList();
     }
 

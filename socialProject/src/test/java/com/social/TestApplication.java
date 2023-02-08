@@ -1,7 +1,7 @@
 package com.social;
 
-import com.social.dto.board;
-import com.social.mapper.boardMapper;
+import com.social.dto.Board;
+import com.social.mapper.BoardMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,14 +17,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Transactional
 public class TestApplication {
 
-    @Autowired boardMapper mapper;
+    @Autowired
+    BoardMapper mapper;
 
     @Test
     public void getList(){
-        List<board> result = mapper.getList();
+        List<Board> result = mapper.getList();
 
         System.out.println(result);
 
         //assertThat(1).isEqualTo(1);
     }
 }
+
+
+

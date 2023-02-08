@@ -1,4 +1,4 @@
 package com.social.config;
 
-public class kakaoLogin {
+public class KakaoLogin {
 }
