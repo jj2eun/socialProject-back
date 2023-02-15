@@ -10,7 +10,12 @@ import lombok.Data;
 @Data
 public class Board {
 
+    private String boardSeq;
     private String boardId;
     private String contents;
+    private String insertDt;
+    private String updateDt;
+    private String id;
+    private String boardMaxSeq;
 
 }
