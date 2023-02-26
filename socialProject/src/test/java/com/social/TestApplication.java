@@ -44,7 +44,6 @@ public class TestApplication {
         int result = mapper.getBoardInsert(param);
         System.out.println(result);
     }
-
 }
 
 
