@@ -4,14 +4,12 @@ import com.social.dto.Board;
 import com.social.mapper.BoardMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@SpringBootApplication
 @SpringBootTest
 @Transactional
 public class TestApplication {
@@ -41,7 +39,7 @@ public class TestApplication {
         Board param = new Board();
         param.setBoardId("1");
         param.setContents("안녕");
-        param.setId("준성");
+        param.setId("준성지으닝");
 
         int result = mapper.getBoardInsert(param);
         System.out.println(result);
