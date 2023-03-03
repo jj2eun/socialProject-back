@@ -29,9 +29,11 @@
 
         <delete id="getBoardDelete" parameterType="Board">
             DELETE FROM social.BOARD
-            WHERE BOARD_SEQ = #{boardSeq}
-              AND BOARD_ID = #{boardId}
-              AND ID= #{id};
+                WHERE BOARD_SEQ IN
+                <foreach item="item" collection="boardList" open="(" separator="," close=")">
+                    #{item.boardSeq}
+                </foreach>
+                AND ID = #{id};
         </delete>
 
         <insert id="getDelBoard" parameterType="Board">

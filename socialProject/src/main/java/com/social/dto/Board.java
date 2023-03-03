@@ -2,6 +2,8 @@ package com.social.dto;
 
 import lombok.Data;
 
+import java.util.List;
+
 /*
 * Data 는 : Getter, Setter, RequiredArgsConstructor, ToString, EqualsAndHashCode
 * 이거 다쓰게 해주는 annotation 입니다.
@@ -17,5 +19,6 @@ public class Board {
     private String updateDt;
     private String id;
     private String boardMaxSeq;
+    private List<Board> boardList;
 
 }
