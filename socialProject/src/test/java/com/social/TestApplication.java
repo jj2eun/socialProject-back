@@ -39,7 +39,7 @@ public class TestApplication {
         Board param = new Board();
         param.setBoardId("1");
         param.setContents("안녕");
-        param.setId("준성지으닝");
+        param.setId("지으닝");
 
         int result = mapper.getBoardInsert(param);
         System.out.println(result);

@@ -19,6 +19,6 @@ public class Board {
     private String updateDt;
     private String id;
     private String boardMaxSeq;
-    private List<Board> boardList;
+    private List<String> boardList;
 
 }

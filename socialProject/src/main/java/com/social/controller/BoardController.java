@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
@@ -20,31 +21,31 @@ public class BoardController {
     @Autowired
     private BoardMapper mapper;
     
-    @RequestMapping(value="/boardList", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value="/boardList", method={RequestMethod.GET})
     @ResponseBody
     public List<Board> boardList(HttpServletRequest servletRequest, HttpServletResponse servletResponse, Board param) throws  Exception{
         return mapper.getList(param);
     }
 
-    @RequestMapping(value="/boardInsert", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value="/boardInsert", method={RequestMethod.POST})
     @ResponseBody
     public void boardInsert(HttpServletRequest servletRequest, HttpServletResponse servletResponse, Board param) throws  Exception{
         mapper.getBoardInsert(param);
     }
 
-    @RequestMapping(value="/boardUpdate", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value="/boardUpdate", method={ RequestMethod.POST})
     @ResponseBody
     public void boardUpdate(HttpServletRequest servletRequest, HttpServletResponse servletResponse, Board param) throws  Exception{
         mapper.getBoardUpdate(param);
     }
 
-    @RequestMapping(value="/boardDelete", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value="/boardDelete", method = {RequestMethod.DELETE})
     @ResponseBody
     public void boardDelete(HttpServletRequest servletRequest, HttpServletResponse servletResponse, Board param) throws  Exception{
         mapper.getBoardDelete(param);
     }
 
-    @RequestMapping(value="/delBoardDelete", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value="/delBoardDelete", method={RequestMethod.GET})
     @ResponseBody
     public void delBoardDelete(HttpServletRequest servletRequest, HttpServletResponse servletResponse, Board param) throws  Exception{
         mapper.getDelBoard(param);
