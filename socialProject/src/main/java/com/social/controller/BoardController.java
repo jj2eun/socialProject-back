@@ -42,6 +42,8 @@ public class BoardController {
     @RequestMapping(value="/boardDelete", method = {RequestMethod.DELETE})
     @ResponseBody
     public void boardDelete(HttpServletRequest servletRequest, HttpServletResponse servletResponse, Board param) throws  Exception{
+        param.setBoardList(Arrays.asList(param.getBoardSeqStr().split("\\|")));
+
         mapper.getBoardDelete(param);
     }
 

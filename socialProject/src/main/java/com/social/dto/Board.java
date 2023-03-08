@@ -20,5 +20,6 @@ public class Board {
     private String id;
     private String boardMaxSeq;
     private List<String> boardList;
+    private String boardSeqStr;
 
 }
